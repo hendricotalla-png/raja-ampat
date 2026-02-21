@@ -1,0 +1,558 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Katalog Website Wisata Raja Ampat</title>
+<style>
+	body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.3;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero {
+    position: relative;
+    height: 100vh; /* Mengisi penuh layar */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gaya untuk video agar menutupi seluruh area header */
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Video akan terpotong secara proporsional */
+}
+
+/* Tambahkan lapisan gelap agar tulisan putih "The Last Paradise" tetap kontras */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Hitam transparan 40% */
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #3498db; /* Warna biru tema Raja Ampat */
+}
+
+.card:hover img {
+    transform: scale(1.08); /* Zoom gambar yang halus */
+}
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #008080;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #005a5a;
+}
+
+/* Gallery Section */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 50px 0;
+}
+
+/* Container Utama Kartu */
+.card {
+    flex: 0 0 300px;
+    background: #ffffff;
+    /* Membuat ujung tidak kotak (bulat estetik) */
+    border-radius: 20px; 
+    overflow: hidden;
+    /* Bayangan halus agar terlihat melayang (elegant) */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    scroll-snap-align: center;
+    border: 1px solid #f0f0f0; /* Garis tepi tipis agar bersih */
+    margin: 10px 0;
+}
+
+/* Mengatur Gambar di dalam Kartu */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* Memastikan gambar mengikuti lengkungan kartu */
+    border-radius: 20px 20px 0 0; 
+    transition: transform 0.6s ease;
+}
+
+/* Mengatur Teks di dalam Kartu */
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Menghilangkan bar penggeser di Chrome, Safari, dan Opera */
+.grid-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 300px; /* Kartu tidak akan mengecil, lebar tetap 300px */
+    scroll-snap-align: center; /* Kartu akan berhenti di tengah saat digeser */
+    transition: transform 0.3s ease;
+}
+.grid-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px; /* Memberi ruang agar kartu tidak mepet ke pinggir */
+    scrollbar-width: none;
+}
+
+.card {
+    /* Gunakan vw (viewport width) agar ukurannya proporsional dengan layar */
+    flex: 0 0 50vw; /* Kartu mengambil 75% lebar layar, sehingga kartu ke-2 terlihat sedikit */
+    max-width: 320px; /* Batas maksimal lebar kartu di layar besar */
+    scroll-snap-align: start;
+}
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3, .card p {
+    padding: 15px;
+}
+
+/* Table Section */
+.packages {
+    padding: 50px 5%;
+    background: white;
+    margin-top: 50px;
+}
+
+/* Menghilangkan dekorasi link agar teks tidak biru/bergaris bawah */
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Efek saat kursor berada di atas kartu */
+.card:hover {
+    transform: translateY(-5px); /* Kartu sedikit naik ke atas */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efek khusus pada gambar */
+.card img:hover {
+    opacity: 0.9;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #008080;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #222;
+    color: white;
+}
+.slider-wrapper {
+    position: relative; /* Menjadi patokan untuk bayangan */
+    width: 100%;
+}
+.slider-wrapper {
+    position: relative; /* Menjadi patokan tombol melayang */
+    width: 100%;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(52, 152, 219, 0.7); /* Warna biru tema kamu dengan transparansi */
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(41, 128, 185, 1);
+}
+
+.prev-btn { left: 10px; } /* Posisi panah kiri */
+.next-btn { right: 10px; } /* Posisi panah kanan */
+
+/* Sembunyikan tombol di HP karena lebih mudah swipe layar langsung */
+@media (max-width: 600px) {
+    .nav-btn { display: none; }
+}
+
+.shadow-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px; /* Lebar area bayangan */
+    height: 100%;
+    /* Membuat gradasi dari transparan ke putih (sesuaikan dengan background web) */
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+    pointer-events: none; /* Agar bayangan tidak menghalangi klik pada foto */
+    z-index: 2;
+}
+/* Menampilkan scrollbar yang tipis dan estetik hanya di area ini */
+.grid-container::-webkit-scrollbar {
+    height: 4px;
+    display: block; /* Munculkan kembali tapi dalam bentuk tipis */
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+    background: #3498db; /* Warna biru sesuai tema Raja Ampat */
+    border-radius: 10px;
+}
+
+.grid-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.slider-wrapper {
+    position: relative; /* Menjadi patokan tombol melayang */
+    width: 100%;
+}
+.container-kartu {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* Membuat 3 kolom otomatis */
+  justify-content:center;                /* Menaruh seluruh grid di tengah */
+  gap: 20px;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(52, 152, 219, 0.7); /* Warna biru tema kamu dengan transparansi */
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(41, 128, 185, 1);
+}
+
+.prev-btn { left: 10px; } /* Posisi panah kiri */
+.next-btn { right: 10px; } /* Posisi panah kanan */
+
+/* Sembunyikan tombol di HP karena lebih mudah swipe layar langsung */
+@media (max-width: 600px) {
+    .nav-btn { display: none; }
+}
+/* Gaya untuk Bagian Kontak Media Sosial */
+.social-contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+
+.social-contact h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-item {
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Warna & Efek Hover Instagram */
+.instagram:hover {
+    color: #E1306C;
+    transform: translateY(-5px);
+}
+
+/* Warna & Efek Hover Facebook */
+.facebook:hover {
+    color: #4267B2;
+    transform: translateY(-5px);
+}
+
+.social-item i {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.social-item span {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    .info-grid { grid-template-columns: 1fr; } /* Dari 2 kolom jadi 1 kolom di HP */
+    h1 { font-size: 2rem; } /* Kecilkan judul di HP */
+}
+</style>
+
+</head>
+<body>
+
+<header class="hero">
+    <video autoplay muted loop playsinline class="video-bg">
+        <source src="Raja Ampat - The Amazon of the Ocean.mp4" type="video/mp4">
+        Maaf, browser Anda tidak mendukung video HTML5.
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="hero-content">
+        <h1>The Last Paradise</h1>
+		<h1>"Raja Ampat"</h1>
+        <p>Temukan keajaiban bawah laut dan gugusan pulau karst Raja Ampat.</p>
+		<p>Hendrico Estevan Talla | 51925087 | Desain Komunikasi Visual</p>
+        <a href="#paket" class="btn-primary">Lihat Paket Liburan Eksklusif</a>
+    </div>
+</header>
+
+    <section class="gallery">
+        <h2 class="section-title">Destinasi Ikonik</h2>
+        <div class="grid-container">
+			
+<div class="card">
+    <a href="piaynemo-detail.html">
+      <img src="img/piaynemo 1.jpeg" alt="Piaynemo">
+        <h3>Piaynemo</h3>
+    </a>
+    <p>Ikon Raja Ampat dengan gugusan pulau karst di tengah laut biru.</p>
+</div>
+			
+<div class="card">
+    <a href="wayag-detail.html"> <img src="img/wayag.jpeg" alt="Wayag"> <div class="card-content"><h3>Wayag</h3>
+            <p>Ikon Raja Ampat dengan gugusan pulau karst di tengah laut biru.</p>
+        </div>
+    </a>
+</div>
+			
+ <div class="card">
+    <a href="pasir timbull-detail.html"> <img src="img/pasir timbul.jpeg" alt="Pasir Timbul"> <div class="card-content"> <h3>Pasir Timbul</h3>
+    <p>Pulai kecil ajaib yang ditengah laut pada saat air laut surut.</p>
+</div>
+</a>
+</div>
+
+<div class="card">
+    <a href="batu pensil-detaill.html">
+        <img src="img/batu pensil 2.jpeg" alt="Batu Pensil">
+        <h3>Batu Pensil</h3>
+    </a>
+    <p>Pemandangan tebing karst yang menyerupai ujung pensil yang mencuat dari laut.</p>
+</div>
+			
+ <div class="card">
+    <a href="telaga bintang-detaill.html"> <img src="img/telaga bintang.jpg" alt="Telaga Bintang"> <h3>Telaga Bintang</h3>
+    </a>
+    <p>Bukit karang yang menyerupai pola bintang yang indah dari atas bukit.</p>
+</div>
+
+<div class="card">
+    <a href="kali biru-detaill.html">
+        <img src="img/kali biru.jpg" alt="Kali Biru">
+        <h3>Kali Biru</h3>
+    </a>
+    <p>Air kali jernih biru kehijauan yang dikelilingi hutan tropis.</p>
+</div>
+</div></section>
+	
+<section class="gallery">
+        <h2 class="section-title">Destinasi Diving/Snorkeling</h2>
+        <div class="grid-container">
+			
+<div class="card">
+    <a href="arborek-detail.html"> <img src="img/arborek.png" alt="Arborek"> <h3>Arborek</h3>
+    </a>
+    <p>Terkenal dengan keindahan bawah laut yang terbentang di depan Kampung.</p>
+</div>
+
+<div class="card">
+    <a href="manta sandy-detail.html">
+        <img src="img/manta.png" alt="Manta Sandy">
+        <h3>Manta Sandy</h3>
+    </a>
+    <p>Snorkeling terbaik bersama pari manta berkumpul.</p>
+</div>
+			
+ <div class="card">
+    <a href="sauwandarek-detail.html"> <img src="img/sauwandarek snorkeling.jpg" alt="Sauwandarek"> <h3>Sauwandarek</h3>
+    </a>
+    <p>Kampung Wisata dengan keindahan hamparan pasir putih dan kekayaan bawah laut.</p>
+</div>
+</div></section>
+
+    <section id="paket" class="packages">
+        <h2 class="section-title">Paket Liburan Eksklusif</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paket Wisata</th>
+                        <th>Durasi</th>
+                        <th>Fasilitas</th>
+                        <th>Harga Mulai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Premium Blue Water</strong></td>
+                        <td>4 Hari 3 Malam</td>
+                        <td>Resort Mewah, Snorkeling, Speedboat</td>
+                        <td>Rp 8.500.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adventure Explorer</strong></td>
+                        <td>5 Hari 4 Malam</td>
+                        <td>Homestay, Trekking Wayag, Diving</td>
+                        <td>Rp 6.200.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Luxury Cruise</strong></td>
+                        <td>7 Hari 6 Malam</td>
+                        <td>Kapal Phinisi, All Inclusive</td>
+                        <td>Rp 15.000.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+<section class="social-contact">
+    <h2>Contact&nbsp;</h2>
+    <div class="social-icons">
+        <a href="https://instagram.com/227ricotalla" target="_blank" class="social-item instagram">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+
+        <a href="https://facebook.com Hendrico Talla" target="_blank" class="social-item facebook">
+            <i class="fab fa-facebook"></i>
+            <span>Facebook</span>
+        </a>
+    </div>
+</section>
+    <footer>
+        <p>&copy; Wonderful Raja Ampat. Papua Barat Daya.</p>
+		<p>Hendrico Estevan Talla | 51925087 | Desain Komunikasi Visual 3</p>
+    </footer>
+<script>
+    function scrollSlider(amount) {
+        const slider = document.getElementById('mainSlider');
+        slider.scrollBy({
+            left: amount,
+            behavior: 'smooth' // Membuat geseran terasa halus (animasi)
+        });
+    }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</script>
+</body>
+</html>
