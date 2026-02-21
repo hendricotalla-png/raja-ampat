@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Destinasi - Kali Biru Raja Ampat</title>
+    <style>
+        /* CSS internal dengan nuansa alam hutan */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            color: #2d3436;
+            background-color: #f0f4f1; /* Hijau pucat sangat muda */
+        }
+
+        header {
+            /* Ganti dengan path gambar Kali Biru Anda */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url("img/kali biru.jpg");
+            background-size: cover;
+            background-position:bottom;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-shadow: 2px 4px 15px rgba(0,0,0,0.6);
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -60px auto 50px auto; 
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .breadcrumb {
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: #0984e3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content-section {
+            margin-bottom: 35px;
+        }
+
+        .content-section h2 {
+            color: #1b4f72;
+            border-left: 6px solid #2ecc71; /* Hijau daun */
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 35px 0;
+            background: #e1f5fe; /* Biru air jernih */
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 10px solid #0984e3;
+        }
+
+        .info-item b {
+            display: block;
+            color: #154360;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .gallery-section h2 {
+            color: #1b4f72;
+        }
+
+        .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .thumbnail-gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .thumbnail-gallery img:hover {
+            transform: scale(1.05) rotate(1deg);
+            cursor: pointer;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 14px 35px;
+            background: linear-gradient(135deg, #1b4f72, #0984e3);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(9, 132, 227, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: -40px 15px 30px 15px; padding: 25px; }
+            .header-content h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Kali Biru</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="WEB WISATA RAJA AMPAT.html">Beranda</a> / <span>Detail Destinasi</span>
+        </div>
+
+        <section class="content-section">
+            <h2>Permata Tersembunyi di Jantung Warsambin</h2>
+            <p>
+                <b>Kali Biru</b> (atau <i>Waiyo</i> dalam bahasa lokal) adalah sebuah sungai alami yang terletak jauh di dalam hutan Teluk Mayalibit. Keunikan utama tempat ini adalah airnya yang berwarna biru safir yang sangat pekat namun tetap transparan, dengan suhu air yang sangat dingin dan menyegarkan.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Keajaiban Alam yang Mistis</h2>
+            <p>
+                Sungai ini dikelilingi oleh pepohonan raksasa dan suara burung-burung hutan. Meski merupakan sungai air tawar, warna birunya tercipta secara alami karena kedalaman dan struktur mineral di dasar sungai. Bagian hulu sungai ini dianggap sakral oleh penduduk setempat, sehingga wisatawan hanya diperbolehkan berenang di area tertentu.
+            </p>
+        </section>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <b>Lokasi:</b>
+                Kampung Warsambin, Teluk Mayalibit.
+            </div>
+            <div class="info-item">
+                <b>Akses:</b>
+                Boat dari Warsambin + Jungle Trekking 15 Menit.
+            </div>
+            <div class="info-item">
+                <b>Aktivitas:</b>
+                Swimming, Forest Bathing, Photography.
+            </div>
+            <div class="info-item">
+                <b>Suhu Air:</b>
+                Sangat Dingin (Sekitar 10°C - 15°C).
+            </div>
+        </div>
+
+        <section class="gallery-section">
+            <h2>Galeri Foto Kali Biru</h2>
+            <div class="thumbnail-gallery">
+                <img src="img/kalibiru-1.jpg" alt="Air Biru Jernih">
+                <img src="img/kalibiru-2.jpg" alt="Hutan Sekitar Kali Biru">
+                <img src="img/kalibiru-3.jpg" alt="Akar Pohon Raksasa">
+                <img src="img/kalibiru-4.jpg" alt="Spot Berenang">
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="WEB WISATA RAJA AMPAT.html" class="btn-back">← Kembali ke Destinasi</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; Eksplor Raja Ampat - Keajaiban Alam Papua
+    </footer>
+
+</body>
+</html>

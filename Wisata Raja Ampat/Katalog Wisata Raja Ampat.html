@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Katalog Website Wisata Raja Ampat</title>
+<style>
+	body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+               url(https://i.pinimg.com/1200x/4b/8f/1e/4b8f1eea3a2c000826e95d81d4de2f42.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #008080;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #005a5a;
+}
+
+/* Gallery Section */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 50px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 5%;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3, .card p {
+    padding: 15px;
+}
+
+/* Table Section */
+.packages {
+    padding: 50px 5%;
+    background: white;
+    margin-top: 50px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #008080;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #222;
+    color: white;
+}
+</style>
+
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>The Last Paradise</h1>
+            <p>Temukan keajaiban bawah laut dan gugusan pulau karst Raja Ampat.</p>
+            <a href="#paket" class="btn-primary">Selengkapnya </a>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <h2 class="section-title">Destinasi Ikonik</h2>
+        <div class="grid-container">
+			
+<div class="card">
+    <a href="../DKV 3_51925087_HENDRICO ESTEVAN TALLA/wayag-detail.html"> <img src="img/wayag.jpeg" alt="Wayag"> <h3>Wayag</h3>
+    </a>
+    <p>Ikon Raja Ampat dengan gugusan pulau karst di tengah laut biru.</p>
+</div>
+
+<div class="card">
+    <a href="../DKV 3_51925087_HENDRICO ESTEVAN TALLA/piaynemo-detail.html">
+        <img src="img/piaynemo 1.jpeg" alt="Piaynemo">
+        <h3>Piaynemo</h3>
+    </a>
+    <p>Pemandangan gugusan pulau yang menakjubkan dari puncak bukit.</p>
+</div>
+			
+ <div class="card">
+    <a href="../DKV 3_51925087_HENDRICO ESTEVAN TALLA/pasir timbul-detail.html"> <img src="img/pasir timbul.jpeg" alt="Pasir Timbul"> <h3>Pasir Timbul</h3>
+    </a>
+    <p>Ikon Raja Ampat dengan gugusan pulau karst di tengah laut biru.</p>
+</div>
+
+<div class="card">
+    <a href="../DKV 3_51925087_HENDRICO ESTEVAN TALLA/piaynemo-detail.html">
+        <img src="img/piaynemo 1.jpeg" alt="Piaynemo">
+        <h3>Piaynemo</h3>
+    </a>
+    <p>Pemandangan gugusan pulau yang menakjubkan dari puncak bukit.</p>
+</div>
+ <div class="card">
+    <a href="../DKV 3_51925087_HENDRICO ESTEVAN TALLA/wayag-detail.html"> <img src="img/wayag.jpeg" alt="Wayag"> <h3>Wayag</h3>
+    </a>
+    <p>Ikon Raja Ampat dengan gugusan pulau karst di tengah laut biru.</p>
+</div>
+
+<div class="card">
+    <a href="../DKV 3_51925087_HENDRICO ESTEVAN TALLA/piaynemo-detail.html">
+        <img src="img/piaynemo 1.jpeg" alt="Piaynemo">
+        <h3>Piaynemo</h3>
+    </a>
+    <p>Pemandangan gugusan pulau yang menakjubkan dari puncak bukit.</p>
+</div>
+			
+        </div>
+    </section>
+
+    <section id="paket" class="packages">
+        <h2 class="section-title">Paket Liburan Eksklusif</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paket Wisata</th>
+                        <th>Durasi</th>
+                        <th>Fasilitas</th>
+                        <th>Harga Mulai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Premium Blue Water</strong></td>
+                        <td>4 Hari 3 Malam</td>
+                        <td>Resort Mewah, Snorkeling, Speedboat</td>
+                        <td>Rp 8.500.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adventure Explorer</strong></td>
+                        <td>5 Hari 4 Malam</td>
+                        <td>Homestay, Trekking Wayag, Diving</td>
+                        <td>Rp 6.200.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Luxury Cruise</strong></td>
+                        <td>7 Hari 6 Malam</td>
+                        <td>Kapal Phinisi, All Inclusive</td>
+                        <td>Rp 15.000.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Wonderful Raja Ampat. Pesona Indonesia.</p>
+    </footer>
+
+</body>
+</html>
